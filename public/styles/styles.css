@@ -1,0 +1,186 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bi {
+    margin-left: 10px;
+    margin-top: 10px;   
+}
+.nav-link {
+    color: black;
+}
+.nav-link:hover {
+  color: white;
+}
+.nav-pills .nav-link.active {
+    background-color: black;
+}
+.fs-4 {
+    font-size: 5rem;
+    color: black;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.btn {
+  height: auto;
+}
+section{
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+    background-color: #B59F78;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+  background-color: #B59F78;
+  margin-bottom: 10px;
+  border-radius: 10%;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    background-color: #B59F78;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+.bottom { 
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+  background-color: #B59F78;
+  border-radius: 10%;  
+} 
+
+footer {
+    background-color: #B59F78; /* Optional: Background color for footer */  
+    padding: 5px;
+    margin-top: auto;
+    position: relative;
+    margin-bottom: 0;
+    z-index: 100;
+    border-top-right-radius: 20%; 
+}
+
+.side {
+  width: 12%;
+  float: left;
+  position: absolute;   
+  border-top-right-radius: 10%;
+  display: flex;
+  flex-direction: column;
+} 
+
+.circle {
+ border-radius: 50%;
+ height: 100px;
+ margin-bottom: 30px;
+ width: 10%;
+}
+
+h1 {
+  /*margin-top: 50px;*/
+  font-family: "Pacifico", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Pacifico", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h6 {
+  font-family: "Pacifico", serif;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+a {
+  color: black;
+ /* font-family: "Eagle Lake", serif, sans-serif; */
+  font-weight: 400;
+  font-style: normal;
+}
+p {
+  width: 50%;
+  /* font-family: "Eagle Lake", serif, sans-serif; */
+  font-weight: 400;
+  font-style: normal;
+}
+.float {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.postform {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.feedback-input {
+    display: flex; 
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    border-radius: 5px;
+    line-height: 20px;
+    background-color: transparent;
+    border: 1px solid #B59F78;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 50%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+button {
+    height: 20px;
+    font-size: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #B59F78;
+}
+
+.buts {
+  width: 10%;
+}
+
+.post {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#submit {
+    background-color: #B59F78;
+}

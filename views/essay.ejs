@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="float">
+    <h2>
+        Essays
+    </h2>
+</div>
+
+
+<% if (!essayPosts || essayPosts.length === 0 ) { %>
+    <p class="float">Posts not available</p>
+<% } else { %>
+  <% essayPosts.forEach((individualPost) => { %> 
+        <div class="post">
+            <p class="float"> <%= individualPost.author %> </p>
+            <a class="float" href="/comment/<%= encodeURIComponent(individualPost.dropdown) %>/<%= encodeURIComponent(individualPost.title) %>"> 
+                <%= individualPost.title %> 
+            </a>
+        </div>
+   <% }); %>
+<% } %> 
+
+<%- include("partials/footer.ejs") %>

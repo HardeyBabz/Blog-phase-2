@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<section>
+<h2 class="float"> Search result(s) for <%= query %></h2>
+
+<%  if(filteredPosts.length === 0 ) {  %>
+    <p class="float">No posts found matching your search query.</p>
+<%  } else { %>
+    <ul class="float">
+        <% filteredPosts.forEach((post) => { %>
+        <li>
+        <a href="/comment/<%= encodeURIComponent(post.dropdown) %>/<%= encodeURIComponent(post.title) %>">
+        <strong><%= post.title %> </strong> : <%= post.dropdown %>
+        </a>
+        </li>
+        
+    <% }); %>
+    </ul>
+
+<% } %>
+
+<a href="/" class="float btn-dark-link">Back to Home</a>
+</section>
+<%- include("partials/footer.ejs") %>    

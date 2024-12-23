@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+<h2 class="float">Edit Post</h2>
+<p class="float">Kindly input email address below.</p>
+
+<form class="postform" action="/books/<%= post.email %>?_method=PATCH" method="POST">
+  <input type="email" class="feedback-input" name="hiddenEmail" placeholder="email..." required>
+  
+  <textarea name="content" class="feedback-input" placeholder="Updated post content..." required><%= post.content %></textarea>
+  
+  <input id="submit" class="feedback-input" type="submit" value="Update Post" />
+</form>
+
+<% if(errorMessage) {%>
+  <div class="float" style="color: red;">
+    <p><%= errorMessage %></p>
+  </div>
+<% } %>
+

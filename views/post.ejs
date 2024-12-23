@@ -1,0 +1,38 @@
+
+<%- include("partials/header.ejs") %>
+<div class="container"></div>
+<div class="float">
+
+<h2>Create a new blog</h2>
+</div>
+
+<div class="postform">
+  <form action="/publish-form" method="POST">
+    <label for="dropdown"></label>
+    <select class="feedback-input" name="dropdown" id="dropdown">
+    <option value="books">Book</option>
+    <option value="articles">Article</option>
+    <option value="essays">Essay</option>
+  </select>
+    <input name="author" type="text" class="feedback-input" placeholder="Author" />
+    <input name="title" type="text" class="feedback-input" placeholder="Title" />
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea name="comment" class="feedback-input" placeholder="Comment" id="comment"></textarea>
+    <p id="char-count">You have typed 0 characters, you have 3000 characters left.</p>
+    <input id="submit" class="feedback-input" type="submit" value="Publish" />
+  </form>  
+</div>
+
+<script>
+  const textarea = document.getElementById('comment');
+  const charCount = document.getElementById('char-count');
+
+  textarea.addEventListener('input', () => {
+    const textcount = textarea.value.length;
+    const charLeft = 3000 - textcount;
+    charCount.textContent = `You have typed ${textcount} characters, you have ${charLeft} characters left.`;
+  });
+</script>
+</div>
+
+<%- include("partials/footer.ejs") %>

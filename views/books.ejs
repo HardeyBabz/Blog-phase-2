@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>  
+
+<section>
+<div class="float">
+    <h2>
+        Books
+    </h2>
+</div>
+
+<% if (!bookPosts || bookPosts.length === 0) { %>
+  <p class="float">No posts available.</p>
+<% } else { %>
+  <% bookPosts.forEach((individualPost) => { %>
+    <div class="post">
+      <p class="float"> <%= individualPost.author %> </p>
+      <a class="float" href="/comment/<%= encodeURIComponent(individualPost.dropdown) %>/<%= encodeURIComponent(individualPost.title) %>"> 
+        <%= individualPost.title %> 
+      </a>
+    </div>
+  <% }); %>
+<% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>
+
+
+
+
+  

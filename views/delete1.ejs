@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+<div class="float">
+
+<h2>Delete Post</h2>
+</div>
+
+<p class="float">Kindly input email address below.</p>
+
+<form class="postform" action="/books/<%= post.email %>/delete" method="POST">
+  <input type="hidden" name="hiddenEmail" value="<%= post.email %>">
+
+  <input type="email" class="feedback-input" name="email" placeholder="email..." required>
+  
+  <input id="submit" class="feedback-input" type="submit" value="Delete" />
+</form>
+
+<% if (errorMessage) { %>
+    <div class="float" style="color: red;">
+        <P><%= errorMessage %></P>
+    </div>
+<% } %>
+

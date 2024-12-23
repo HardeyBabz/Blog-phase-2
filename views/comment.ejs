@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+
+<h2 class="float"> Author: <%= posted.author %></h2>
+
+<p class="float">
+    <h6 class="float"><%= posted.title %></h6>
+    <p class="float"><%= posted.comment %></p>
+    <div class="float">
+    <button class="buts" onclick="location.href='/books/<%= encodeURIComponent(posted.email) %>/edit'">Edit</button>
+
+    <button class="buts" onclick="location.href='/books/<%= encodeURIComponent(posted.email) %>/delete'">Delete</button>
+    
+    </div>
+</p>
+
+<%- include("partials/footer.ejs") %>    
